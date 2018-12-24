@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>twitter</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            height: 2000px;
+            margin: 0;
+            background:url("old_map.png")
+        }
+
+        .navbar{
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color:rgb(255, 255, 255);
+            z-index:99;
+        }
+
+        .container{
+            max-width: 1180px;
+            margin: auto;
+        }
+
+        .clearfix{
+            clear: both;  
+        }
+
+        i.fa-twitter{
+            font-size: 18px;
+            color: #1DA1F2;
+            margin-right: 7px;
+            margin-top: 13px;
+            margin-bottom: 0;
+        }
+
+        .navbar .navbar-link{
+            line-height: 50px;
+            padding: 0px 12px 6px 12px;
+            display: inline-block;
+            height: 46px;
+            font-size: 13px;
+            color: rgb(102,117,127);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .left_box{
+            float: left;
+        }
+
+        .navbar .left_box .navbar-link:hover{
+            color:#F7931E;
+            border-bottom: 3px solid #F7931E;
+        }
+
+        .right_box{
+            float: right;
+        }
+
+        .navbar .search-box{
+            border: 1px solid rgb(221, 220, 220);
+            background-color:#F5F8FA;
+            border-radius: 20px;
+            transition: 0.3s;
+            padding: 0px 10px;
+            width: 200px;
+            height: 30px;
+        }
+
+        .navbar .search-box:focus{
+            outline: none;
+            border: 2px solid #1DA1F2;
+        }
+
+        .navbar .right_box span {
+            line-height: 50px;
+            margin: 0 15px;
+            font-size: 12px;
+            font-weight: 50;
+            color: rgb(102, 117, 127);
+        }
+
+        .section_pic{
+            width: 100%;
+            height: 538px;
+            overflow:hidden;
+        }
+
+        img{
+            width: 100%;
+            margin-top: -200px;
+            position: sticky;
+            top: -70px;
+        }
+
+
+        .navbar2{
+            box-shadow: 0 1px 3px 0 rgba(70, 41, 50, 0.25);
+            position: sticky;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color:rgb(255, 255, 255);
+            z-index:97;
+        }
+
+        .navbar2 .container {
+            position: relative;
+        }
+
+        .main_photo {
+            height: 218px;
+            width: 218px;
+            border: 6px solid white;
+            border-radius: 50%;
+            position: absolute;
+            /* left: 0; */
+            top: -130px;
+            background-image: url(icon.jpg);
+            background-size: 248px;
+            background-position:38% 18%;
+        }
+
+        .navbar2 .left_box {
+            margin-left: 295px;
+        }
+
+        .navbar2 .left_box .navbar-link {
+            display:block;
+            float: left;
+            text-align: center;
+            padding: 12px 15px 7px 15px;
+            text-decoration:none;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: "Segoe UI",Arial,sans-serif;
+            color: #657786;
+        }
+
+        .navbar2 .left_box .navbar-link span {
+            font-size: 17px;
+        }
+
+        .navbar2 .left_box a:hover span{
+            color: #F7931E;
+        }
+        
+        .navbar2 .left_box a:hover {
+            border-bottom: 3px solid #F7931E;
+        }
+
+        /* .navbar2 .left_box a #s01{
+            color: #F7931E;
+        }
+        .navbar2 .left_box #a01{
+            border-bottom: 3px solid #F7931E;
+        }         */
+
+        .navbar2 .right_box {
+            width: 105px;
+            height: 36px;
+            border: 1px solid #F7931E;
+            border-radius: 20px;
+        }
+
+        .navbar2 .right_box a {
+            font-family: "Segoe UI",Arial,sans-serif;
+            font-size: 14px;
+            margin-left: 37px;
+            margin-top: 7px;
+            color: #F7931E;
+            font-weight: 700;
+            display: block;
+        }
+
+        .navbar2 .right_box {
+            margin-top: 12px;
+        }
+
+        .navbar2 .right_box:hover {
+            background-color:#FFF0E1;
+        }
+
+        .container2 {
+            max-width: 1180px;
+            margin: auto;            
+        }
+
+        .container2 .contain {
+            margin-top: 15px;
+            width: 100%;
+            height: 2000px;
+            background-color:rgba(255,255,255,0.5);
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="left_box">
+                <a class="navbar-link" href="#"><i class="fab fa-twitter"></i>首頁</a>
+                <a class="navbar-link" href="#">關於</a>
+            </div>
+            <div class="right_box">
+                <input class="search-box" type="text" placeholder="搜尋 Twitter" required>
+                <span class="navbar-link">已經擁有帳戶?&nbsp;&nbsp;<b>登入▼</b></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </nav>
+    <div class="section_pic">
+        <img src="wid.jpg" alt="">
+    </div>
+
+    <nav class="navbar2">
+        <div class="container">
+            <div class="main_photo"></div>
+            <div class="left_box">
+                <a class="navbar-link" id="a01" href="#">
+                    <div>推文</div>
+                    <span id="s01">3.43萬</span>
+                </a>   
+                <a class="navbar-link" href="#"><div>正在跟隨</div><span>318</span></a>
+                <a class="navbar-link" href="#"><div>跟隨者</div><span>667萬</span></a>
+                <a class="navbar-link" href="#"><div>喜歡的內容</div><span>1.3萬</span></a>
+            </div>
+            <div class="right_box">
+                <a>跟隨</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container2">
+        <div class="contain"></div>
+    </div>
+
+
+</body>
+
+</html>

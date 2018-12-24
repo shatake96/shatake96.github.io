@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sherlock</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: auto;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+
+        /*----------------第一條NAV----------------*/
+        .sub_nav {
+            border-top: 20px solid rgba(87, 40, 8, 0.884);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+
+        /*----------------第一頁----------------*/
+        .block01 {
+            width: 100%;
+            height: 100vh;
+            background-image: url("./img/miss10.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* position: relative; */
+        }
+
+        .block01 p {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-49%);
+            margin: 0;
+            width: 520px;
+            height: 70px;
+            border-radius: 10px;
+            background-color: rgba(87, 40, 8, 0.699);
+
+            font-size: 70px;
+            font-weight: 600;
+            letter-spacing: 1vh;
+            color: rgba(226, 226, 226, 0.808);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 1%;
+        }
+
+        .block01 .first {
+            color: rgba(226, 226, 226, 0.808);
+            float: right;
+            margin-top: 80vh;
+            margin-right: 10%;
+            font-size: 50px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+
+        /*----------------第二頁Miss Me----------------*/
+        .block02 {
+            height: 100vh;
+            background-image: url("./img/miss11.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: rgb(46, 34, 26);
+        }
+
+        /* .block02{圖片透明遮罩
+            background-image: url("/img/gray.jpg");
+            background
+        } */
+
+
+        /*----------------主要NAV----------------*/
+        .main_nav {
+            width: 100%;
+            height: 40px;
+            background-color: rgba(87, 40, 8, 0.699);
+            float: left;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .i00 {
+            display: block;
+            color: rgba(226, 226, 226, 0.808);
+            text-decoration: none;
+
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+            margin-right: 10px;
+            float: left;
+        }
+
+        .but {
+            display: block;
+            color: rgb(255, 212, 163);
+            text-decoration: none;
+
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            font-family: 微軟正黑體;
+            padding: 12px;
+            margin-right: 0px;
+            float: left;
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .but:hover {
+            color: rgb(255, 195, 126);
+            background-color: rgba(88, 92, 112, 0.699);
+            transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+
+        /*----------------往上的按鈕----------------*/
+        .btnbacktotop-posd {
+            bottom: 160px;
+        }
+
+        .btnbacktotop {
+            display: block;
+            transition: all .4s;
+            z-index: 51;
+            cursor: pointer;
+            background-position: center;
+            /* background-image: url(../images/btn-backtotop.png); */
+            background-color: blanchedalmond;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            bottom: -50px;
+            left: 60px;
+        }
+
+
+        /*----------------第三頁小提琴----------------*/
+        .block03 {
+            width: 100%;
+            height: 100vh;
+            background-image: url("./img/viol.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .block03:hover .introduction {
+            color: blanchedalmond;
+            transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+            letter-spacing: 0.5vh;
+        }
+
+        .block03 p {
+            margin: 0;
+            padding-top: 55vh;
+            font-size: 18px;
+            letter-spacing: 0.5vh;
+            color: rgb(219, 231, 233);
+            font-family: 微軟正黑體;
+            text-align: center;
+        }
+
+        .block03 .introduction {
+            display: block;
+            color: rgba(255, 235, 205, 0);
+            padding: 2% 10%;
+            font-family: 微軟正黑體;
+            letter-spacing: 0vh;
+            line-height: 30px;
+            font-size: 18px;
+            text-align: center;
+            transition: 10s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+
+        /*文字分三欄*/
+        /* .block03 .introduction {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+            -webkit-column-gap: 40px;
+            -moz-column-gap: 40px;
+            column-gap: 40px;
+              } */
+
+
+        /*----------------第三頁後插頁----------------*/
+        .block031 {
+            width: 100%;
+            height: 60vh;
+            background-image: url("./img/run.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .block031:hover .t03 {
+            font-size: 50px;
+            color: rgba(226, 226, 226, 0);
+            transition: 5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .block031 .t03 {
+            padding: 33vh 40vh;
+            color: rgba(226, 226, 226, 0.808);
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1vh;
+            transition: 30s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+
+        /*----------------第四頁角色----------------*/
+        .block04 {
+            position: relative;
+            height: 100vh;
+        }
+
+        .block04 .chaL {
+            width: 50%;
+            height: 100vh;
+            background-image: url("./img/holmes.jpg");
+            background-size: cover;
+            float: left;
+            position: relative;
+        }
+
+        .block04 .chaR {
+            width: 50%;
+            height: 100vh;
+            background-image: url("./img/john.jpg");
+            background-size: cover;
+            background-position: 30% 0;
+            float: left;
+            position: relative;
+        }
+
+        .block04 .chaL .t041 {
+            display: block;
+            position: absolute;
+            top: 48%;
+            left: 46%;
+            color: rgba(212, 212, 212, 0);
+            width: 400px;
+            font-family: 微軟正黑體;
+            letter-spacing: 2px;
+            line-height: 27px;
+            font-size: 16px;
+            transition: 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .block04 .chaR .t042 {
+            display: block;
+            position: absolute;
+            top: 48%;
+            left: 10%;
+            color: rgba(212, 212, 212, 0);
+            width: 300px;
+            font-family: 微軟正黑體;
+            letter-spacing: 2px;
+            line-height: 27px;
+            font-size: 16px;
+            transition: 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .block04:hover .t041 {
+            color: rgba(212, 212, 212, 1);
+            transition: 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .block04:hover .t042 {
+            color: rgba(212, 212, 212, 1);
+            transition: 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+
+        /*----------------第五頁三欄系列----------------*/
+        .block051 {
+            width: 100%;
+            height: 30vh;
+            background-image: url("./img/gray.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .block05 {
+            width: 100%;
+            height: 100vh;
+            background-image: url("./img/gray.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .block05 .box501 {
+            width: 30%;
+            height: 620px;
+            border: 2px solid gray;
+            float: left;
+            margin-top: 15%;
+        }
+
+        .block05 .pic501 {
+            width: 100%;
+            height: 480px;
+            background-image: url("./img/s02.jpg");
+            background-size: contain;
+        }
+
+        .block05 .p501 {
+            color: rgba(226, 226, 226, 0.808);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 微軟正黑體;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .block05 .box502 {
+            width: 30%;
+            height: 620px;
+            border: 2px solid gray;
+            float: left;
+            margin-top: 15%;
+            margin-left: 50px;
+        }
+
+        .block05 .pic502 {
+            width: 100%;
+            height: 480px;
+            background-image: url("./img/s041.jpg");
+            background-size: cover;
+            background-position: 0 4px;
+        }
+
+        .block05 .box503 {
+            width: 30%;
+            height: 620px;
+            border: 2px solid gray;
+            float: right;
+            margin-top: 15%;
+        }
+
+        .block05 .pic503 {
+            width: 100%;
+            height: 480px;
+            background-image: url("./img/bride.jpg");
+            background-size: 110%;
+            background-position: center;
+        }
+
+        #section_3 .left_box {
+            float: left;
+            width: 33.33%;
+            padding: 0 20px;
+        }
+
+
+        /*----------------第六頁榮譽----------------*/
+        .block06 {
+            width: 100%;
+            height: 100vh;
+            background-attachment: fixed;
+            background-image: url("./img/two02.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .block06 .boxL {
+            width: 300px;
+            height: 400px;
+            background-image: url("./img/emmy.jpg");
+            background-size: cover;
+            background-position: -310px 0;
+            float: left;
+            margin-top: 30%;
+        }
+
+        .block06 .boxR {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(37, 34, 34);
+            float: right;
+            margin-top: 30%;
+
+            /* text-align: center; */
+            padding: 30px;
+            color: bisque;
+            font-family: 微軟正黑體;
+            letter-spacing: 2px;
+            line-height: 27px;
+            font-size: 16px;
+        }
+
+
+        /*----------------第七頁全家福----------------*/
+        .block07 {
+            width: 100%;
+            height: 100vh;
+            background-image: url("./img/family.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+
+        /*----------------頁尾footer----------------*/
+        footer {
+            width: 100%;
+            height: 30px;
+            display: block;
+            color: blanchedalmond;
+            left: 20%;
+            top: 15px;
+            text-align: center;
+            line-height: 30px;
+
+            background-color: rgba(87, 40, 8, 0.938);
+        }
+
+
+        /*----------------影片----------------*/
+        #frame {
+            width: 100%;
+            height: 100vh;
+        }
+
+
+
+        /*----------------RWD----------------*/
+        @media only screen and (max-width:1200px) {
+            #block04 {
+                height: 200vh;
+            }
+
+
+            #block04 .chaL {
+                width: 100%;
+                height: 100vh;
+            }
+
+            #block04 .chaR {
+                width: 100%;
+                height: 100vh;
+                left: 0px;
+                top: 0%;
+            }
+        }
+
+        @media only screen and (max-width:1200px) {
+            .block06 {
+                width: 100%;
+                height: 200vh;
+            }
+
+            .block06 .boxL {
+                width: 50%;
+                height: 70vh;
+                background-size: cover;
+                background-position: 400px 0;
+                margin-left: 200px;
+            }
+
+            .block06 .boxR {
+                width: 100%;
+                height: 40vh;
+            }
+
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <nav class="sub_nav"></nav>
+
+
+    <div class="block01">
+        <p>SHERLOCK</p>
+        <a href="#block03" class="first">↓</a>
+    </div>
+
+
+    <div class="block02"></div>
+
+
+    <nav class="main_nav">
+        <div class="container">
+            <a class="i00" href="#block01">SHERLOCK</a>
+            <a class="but" href="#block03">背景</a>
+            <a class="but" href="#block04">人物</a>
+            <a class="but" href="#block05">系列</a>
+            <a class="but" href="#block06">榮譽</a>
+        </div>
+    </nav>
+
+
+    <div class="block03" id="block03">
+        <div class="container">
+            <p>–改編自亞瑟·柯南·道爾爵士的夏洛克·福爾摩斯偵探小說–</p>
+            <span class="introduction">
+                &nbsp;&nbsp;&nbsp;故事背景從19世紀大英帝國鼎盛時期搬到了21世紀英國繁華熱鬧的大都市，一位脾氣古怪的大偵探在現代倫敦的街頭四處搜尋線索。
+                福爾摩斯開始用手機傳簡訊；而華生不再寫日記與備忘錄，卻是在經營部落格......
+                用全新角度重新打造出的福爾摩斯，巧妙加入現代的元素，熟知科學辦案方法，讓這個廣為流傳的偵探故事被賦予新的色彩。
+            </span>
+        </div>
+    </div>
+
+
+    <div class="block031">
+        <div class="t03">The Best Partner</div>
+    </div>
+
+
+    <div class="block04" id="block04">
+        <div class="chaL">
+            <p class="t041">夏洛克·福爾摩斯&nbsp;&nbsp;&nbsp;/Benedict Cumberbatch 飾<br><br>
+                “諮詢偵探”，平時在家等警方或顧客上門諮詢。<br>
+                擅長推理、小提琴和格鬥術，用演繹法來推斷案情，個人網站名為“演繹法研究”，經常在上面發表一些斷案的心得。<br>
+                每當面對複雜懸疑的案件時就異常興奮，視破案為實現人生價值的手段。</p>
+        </div>
+        <div class="chaR">
+            <p class="t042">約翰·華生&nbsp;&nbsp;&nbsp;/Martin Freeman 飾<br><br>
+                退伍軍醫，曾服役於前諾桑伯蘭第五明火軍團，夏洛克的室友。<br>
+                性格穩重、溫和，對人友善，協助破案時則果敢堅強。槍法很準，曾經在夏洛克命懸一線時隔著兩道窗戶玻璃一槍打中兇手要害。</p>
+        </div>
+    </div>
+
+
+    <!-- <div class="block051"></div> -->
+    <div class="block05" id="block05">
+        <div class="container">
+            <div class="box501">
+                <div class="pic501"></div>
+                <p class="p501">第二季<br><br>
+                    1.無人靈車（The Empty Hearse）<br>
+                    2.三的徵兆（The Sign of Three）<br>
+                    3.最後誓言（His Last Vow）</p>
+            </div>
+            <div class="box502">
+                <div class="pic502"></div>
+                <p class="p501">第四季<br><br>
+                    1.六座柴契爾夫人像（The Six Thatchers）<br>
+                    2.撒謊的偵探（The Lying Detective）<br>
+                    3.最後一案（The Final Problem）</p>
+            </div>
+            <div class="box503">
+                <div class="pic503"></div>
+                <p class="p501">地獄新娘<br>幾小時前自殺身亡的妻子身著舊式婚紗再次出現了，她的幽靈帶著強烈的複仇慾望在
+                    街上徘徊。夏洛克和華生不得不想盡辦法對付這個“從墳墓裡爬出來”的敵人...</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="block051"></div> -->
+
+
+    <div class="block06" id="block06">
+        <div class="container">
+            <div class="boxL"></div>
+            <div class="boxR">
+                <h2>第66屆黃金時段艾美獎</h2>
+                <p>最佳男主角 班奈狄克·康柏拜區<br>
+                    最佳男配角 馬丁·費里曼<br>
+                    最佳編劇 史蒂芬·莫法特（最後的誓言）<br>
+                    最佳攝影 Neville Kidd（最後的誓言）<br>
+                    最佳單攝像機圖像剪輯 Yan Miles<br>
+                    最佳編曲 大衛·阿諾德 / 邁克爾·普賴斯<br>
+                    最佳音效剪輯 Doug Sinclair / Stuart McCowan / Jon Joyce / Paul McFadden / Will Everett / Sue
+                    Harding（最後的誓言）</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="block07"></div>
+
+
+    <!-- <div class="clearfix"></div> -->
+
+    <div id="frame">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qlcWFoNqZHc" frameborder="0" muted=”true”
+            preload=”auto” allow=" accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+    <footer>
+        Copyright © 2009 Adobe Systems Incorporated. All rights reserved.
+    </footer>
+
+
+</body>
+
+</html>
