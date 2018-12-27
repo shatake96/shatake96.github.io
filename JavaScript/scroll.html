@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .boxA {
+            width: 300px;
+            height: 300px;
+            background-color: #ddd;
+            /* overflow: scroll; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxA">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quia minus repellendus quidem voluptatibus
+        libero inventore expedita commodi quisquam doloremque quibusdam at reiciendis ratione facilis odio, impedit
+        voluptates, tempora laboriosam deserunt culpa alias. Quisquam ipsa, ut non quod asperiores nesciunt ab, et
+        commodi magnam voluptas perferendis dolor veniam! Aliquid culpa mollitia, illum odit perspiciatis non? Delectus
+        nulla laboriosam accusantium reprehenderit consequatur. Magnam necessitatibus quibusdam quis maiores quisquam
+        aliquid porro velit facilis earum soluta quia, atque sint nisi pariatur eos? Beatae optio perspiciatis vitae
+        delectus fugiat itaque officia repellat. Corrupti iusto placeat quos harum, soluta sequi delectus ullam, sint
+        totam sed perferendis facere vel. Maxime, sint minus. Cumque non, atque animi culpa accusamus fuga ullam quas.
+        Culpa obcaecati omnis hic, odit quos rerum cumque blanditiis, eligendi repellat temporibus, non animi impedit
+        nobis repudiandae tempore illum fugit? Iste neque repellat consequatur debitis dolorem recusandae pariatur,
+        vitae itaque at exercitationem, aperiam ad cum ullam veritatis quis inventore! Porro, maiores consectetur
+        praesentium esse enim, et asperiores illo natus corporis quibusdam sapiente itaque excepturi, sint doloribus.
+        Ab a quibusdam tempora explicabo error maiores est et similique, voluptate nulla nihil minima, dignissimos
+        velit sit molestias quis laudantium facilis fugiat voluptatibus hic obcaecati nesciunt dolor cumque fuga.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dicta debitis odio magni sequi quo sapiente
+        molestiae soluta numquam, porro reprehenderit necessitatibus. Facere, est reiciendis? Eos necessitatibus, omnis
+        vitae sed, consectetur dolor doloremque expedita minima id perspiciatis impedit quia voluptatibus. Nisi sed
+        iure officiis ducimus architecto eos sint, earum distinctio praesentium illum pariatur itaque! Amet corrupti
+        ipsa sequi vero, officiis laboriosam perferendis dolorum recusandae in beatae odit, ratione iusto dolor numquam
+        error laudantium. Suscipit quibusdam obcaecati, commodi repellendus eaque velit ipsam eligendi architecto
+        minima ipsa, doloremque ullam maxime et ipsum, itaque quam. Rerum ex, est magni saepe maiores sit laboriosam
+        ratione eaque incidunt eveniet numquam laborum quod cupiditate nihil odit aspernatur. Deleniti ab, aliquam
+        consequatur distinctio inventore sint a voluptas, quae error fuga voluptatibus nulla similique sit
+        exercitationem possimus iste in cum? Autem fuga, porro omnis rerum nobis hic impedit sit in maiores eveniet
+        iste error nostrum, laborum vitae dolor beatae et quaerat fugit! Voluptatum numquam pariatur quisquam quis
+        officiis ut totam consequatur, eveniet nostrum placeat, doloribus molestiae, maxime reiciendis dolore cum
+        culpa. Consectetur doloremque corrupti amet atque culpa. Similique labore hic maiores distinctio aliquam optio
+        delectus corrupti ipsa nihil autem sequi neque tempora ipsam, maxime, voluptates molestias voluptatibus
+        repellendus?
+    </div>
+
+    <script>
+        const boxA = document.querySelector('#boxA');
+
+        window.onscroll = function () {
+            let scrollTop = document.documentElement.scrollTop;
+            console.log(scrollTop);
+
+            if (scrollTop > 200) {
+                //改文字顏色
+                boxA.style.color = "blue";
+                boxA.style.fontsize = "20";
+            } else {
+                boxA.style.color = "black";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>及不及格</title>
+</head>
+
+<body>
+
+    <input id="insco" type="number" min="0" max="100"></input>
+    <button id="btn">SEND</button>
+    <h1></h1>
+
+    <script>
+        let sco;
+        const getsco = document.querySelector("#insco");
+        const btn1 = document.querySelector("#btn");
+        const h1 = document.querySelector('h1');
+
+        //按下按鈕
+        btn1.onclick = function () {
+            //取得input的值 目前分數
+            sco = getsco.value;
+            //console.log(sco);
+
+            //判斷分數 將之分等
+            if(sco < 60){
+                h1.innerHTML = "<span style='color:red'>不及格</span>"
+
+            }else{
+                h1.innerHTML = "及格"
+
+            }
+
+            //將等級放入H1中
+        }
+
+    </script>
+
+</body>
+
+</html>

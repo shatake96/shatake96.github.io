@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <img id="img1" src="https://www.ikea.com/tw/zh/images/products/arkelstorp-bian-zhuo-hei-se__0452492_PE601446_S4.JPG" alt="">
+    
+    <script>
+        let pic = document.querySelector('#img1');
+        const pic_desk_src = "https://www.ikea.com/tw/zh/images/products/arkelstorp-bian-zhuo-hei-se__0452492_PE601446_S4.JPG";
+        const pic_desk2_src = "https://www.ikea.com/hk/zh/images/products/hemnes-zhang-ji__0458974_PE605852_S4.JPG";
+
+
+        pic.onclick = function () {
+            //將圖片替換為
+
+            //二種寫法
+            // desk.src="https://www.ikea.com/hk/zh/images/products/hemnes-zhang-ji__0458974_PE605852_S4.JPG";
+            // desk.setAttribute ("src" , "https://www.ikea.com/hk/zh/images/products/hemnes-zhang-ji__0458974_PE605852_S4.JPG");
+            //元素.設定屬性(屬姓名,屬性數值)
+
+            var link = pic.getAttribute ("src");
+            //將抓pic的網址這個動作命名為link
+
+            if (link === pic_desk_src) {
+                pic.setAttribute ("src", pic_desk2_src)
+                console.log("A");
+            }else {
+                pic.setAttribute ("src", pic_desk_src)
+                console.log("B");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

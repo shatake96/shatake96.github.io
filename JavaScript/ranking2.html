@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>等級換算器</title>
+    <style>
+        *{
+            font-family:微軟正黑體;
+        }
+    
+    </style>
+</head>
+<body>
+    <h2 style="font-weight:900 ;color:rgb(90, 90, 90) ;">等級換算器</h2>
+    <input id="insco" type="number" min="0" max="100"></input>
+    <button id="btn">SEND</button>
+    <h1></h1>
+
+    <script>
+        let sco;
+        const getsco = document.querySelector("#insco");
+        const btn1 = document.querySelector("#btn");
+        const h1 = document.querySelector('h1');
+
+        //按下按鈕
+        btn1.onclick = function () {
+
+
+            //取得input的值 目前分數
+            sco = getsco.value;
+            //console.log(sco);
+
+            //判斷分數 將之分等
+            if(sco > 100 || sco < 0){
+                h1.innerHTML = "<span style='color:red;'>請重新輸入成績</span>"
+            }
+
+            else if (sco < 60){
+                h1.innerHTML = "<span style='color:red;'>不及格</span>"
+            }
+            
+            else if (sco < 70){
+                h1.innerHTML = "丁"
+            }
+
+            else if (sco < 80){
+                h1.innerHTML = "丙"
+            }
+
+            else if (sco < 90){
+                h1.innerHTML = "乙"
+            }
+
+            else if (sco <= 100){
+                h1.innerHTML = "甲"
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
