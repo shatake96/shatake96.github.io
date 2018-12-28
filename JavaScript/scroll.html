@@ -8,6 +8,9 @@
     <title>Document</title>
 
     <style>
+        body{
+            height: 2000px;
+        }
         .boxA {
             width: 300px;
             height: 300px;
@@ -51,20 +54,21 @@
     </div>
 
     <script>
-        const boxA = document.querySelector('#boxA');
+        const boxA = document.querySelector('.boxA');
 
         window.onscroll = function () {
             let scrollTop = document.documentElement.scrollTop;
-            console.log(scrollTop);
+            // console.log(scrollTop);
 
-            if (scrollTop > 200) {
+            if(scrollTop > 200) {
                 //改文字顏色
                 boxA.style.color = "blue";
-                boxA.style.fontsize = "20";
+                boxA.style.fontSize = "30px";
             } else {
                 boxA.style.color = "black";
+                boxA.style.fontSize = "20px";
             }
-        }
+        };
 
 
     </script>

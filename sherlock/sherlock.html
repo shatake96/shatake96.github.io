@@ -67,6 +67,8 @@
             padding: 1%;
         }
 
+
+        /*----------------第一頁↓箭頭----------------*/
         .block01 .first {
             color: rgba(226, 226, 226, 0.808);
             float: right;
@@ -464,6 +466,26 @@
         }
 
 
+        /*----------------往上按鈕----------------*/
+        #back_to_top {
+            position: fixed;
+            bottom: 60px;
+            right: 150px;
+            color: rgb(226, 226, 226);
+            font-weight: 600;
+            font-size: 40px;
+            width: 40px;
+            height: 35px;
+            border-radius: 20px;
+            background-color: rgba(87, 40, 8, 0.61);
+            text-align: center;
+            display: none;
+        }
+
+        #back_to_top.show{
+            display: block;
+        }
+
 
         /*----------------RWD----------------*/
         @media only screen and (max-width:1200px) {
@@ -623,9 +645,38 @@
             allowfullscreen></iframe>
     </div>
 
+
     <footer>
         Copyright © 2009 Adobe Systems Incorporated. All rights reserved.
     </footer>
+
+
+    <div id="back_to_top">↑</div>
+
+    <script>
+        let to_top;
+        to_top = document.querySelector('#back_to_top');
+        //案件事件
+        to_top.onclick = function () {
+            console.log(to_top);
+            document.documentElement.scrollTop = 0;
+        }
+        //卷軸事件-當卷軸捲到xx px，回到最上的按鈕出現
+        window.onscroll = function(){
+            let scrollTop = document.documentElement.scrollTop;
+            console.log(scrollTop);
+
+            //如果超過200，就出現
+            if(scrollTop > 1070){
+                to_top.classList.add('show');
+            }else{
+                to_top.classList.remove('show');
+            }
+
+        }
+
+
+    </script>
 
 
 </body>
