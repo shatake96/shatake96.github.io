@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sherlock</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -176,33 +177,27 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-
-        .block03:hover .introduction {
-            color: blanchedalmond;
-            transition: 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
-            letter-spacing: 0.5vh;
+            /* background-attachment: fixed; */
         }
 
         .block03 p {
             margin: 0;
             padding-top: 55vh;
             font-size: 18px;
-            letter-spacing: 0.5vh;
-            color: rgb(219, 231, 233);
+            letter-spacing: 0.8vh;
+            color: rgba(226, 226, 226, 0.808);
             font-family: 微軟正黑體;
             text-align: center;
         }
 
         .block03 .introduction {
             display: block;
-            color: rgba(255, 235, 205, 0);
+            color: rgb(255, 235, 205);
             padding: 2% 10%;
             font-family: 微軟正黑體;
-            letter-spacing: 0vh;
+            letter-spacing: 0.5vh;
             line-height: 30px;
-            font-size: 18px;
+            font-size: 16px;
             text-align: center;
             transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
         }
@@ -218,7 +213,7 @@
               } */
 
 
-        /*----------------第三頁後插頁----------------*/
+        /*----------------第三頁後奔跑插頁----------------*/
         .block031 {
             width: 100%;
             height: 60vh;
@@ -229,16 +224,10 @@
             background-attachment: fixed;
         }
 
-        .block031:hover .t03 {
-            font-size: 50px;
-            color: rgba(226, 226, 226, 0);
-            transition: 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
         .block031 .t03 {
             padding: 33vh 40vh;
-            color: rgba(226, 226, 226, 0.808);
-            font-size: 20px;
+            color: rgba(226, 226, 226, 0.733);
+            font-size: 25px;
             font-family: Arial, Helvetica, sans-serif;
             letter-spacing: 1vh;
             transition: 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -275,13 +264,12 @@
             position: absolute;
             top: 48%;
             left: 46%;
-            color: rgba(212, 212, 212, 0);
+            color: rgb(212, 212, 212);
             width: 400px;
             font-family: 微軟正黑體;
             letter-spacing: 2px;
             line-height: 27px;
             font-size: 16px;
-            transition: 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .block04 .chaR .t042 {
@@ -289,23 +277,12 @@
             position: absolute;
             top: 48%;
             left: 10%;
-            color: rgba(212, 212, 212, 0);
+            color: rgb(212, 212, 212);
             width: 300px;
             font-family: 微軟正黑體;
             letter-spacing: 2px;
             line-height: 27px;
             font-size: 16px;
-            transition: 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .block04:hover .t041 {
-            color: rgba(212, 212, 212, 1);
-            transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .block04:hover .t042 {
-            color: rgba(212, 212, 212, 1);
-            transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
 
@@ -387,12 +364,6 @@
             background-position: center;
         }
 
-        #section_3 .left_box {
-            float: left;
-            width: 33.33%;
-            padding: 0 20px;
-        }
-
 
         /*----------------第六頁榮譽----------------*/
         .block06 {
@@ -454,7 +425,7 @@
             top: 15px;
             text-align: center;
             line-height: 30px;
-
+            font-family: Arial, Helvetica, sans-serif;
             background-color: rgba(87, 40, 8, 0.938);
         }
 
@@ -482,12 +453,151 @@
             display: none;
         }
 
-        #back_to_top.show{
+        #back_to_top.show {
             display: block;
         }
 
 
         /*----------------RWD----------------*/
+        @media only screen and (max-width:1500px) {
+            .block03 .introduction {
+                font-size: 16px;
+                font-weight: 100;
+            }
+
+            .block04 .chaL .t041 {
+                top: 48%;
+                left: 43%;
+                width: 360px;
+                letter-spacing: 2px;
+                line-height: 27px;
+                font-size: 14px;
+            }
+
+            .block04 .chaR .t042 {
+                top: 48%;
+                left: 7%;
+                width: 260px;
+                letter-spacing: 2px;
+                line-height: 27px;
+                font-size: 14px;
+            }
+
+            .block05 {
+                height: 150vh;
+            }
+
+            .block05 .box501 {
+                width: 30%;
+                height: 480px;
+                border: 2px solid gray;
+                float: left;
+                /* margin-top: 50%; */
+            }
+
+            .block05 .pic501 {
+                width: 100%;
+                height: 480px;
+                background-image: url("./img/s02.jpg");
+                background-size: contain;
+            }
+
+            .block05 .p501 {
+                color: rgba(226, 226, 226, 0.808);
+                font-size: 16px;
+                font-weight: 700;
+                font-family: 微軟正黑體;
+                text-align: center;
+                padding: 5px;
+            }
+
+            .block05 .box502 {
+                width: 30%;
+                height: 480px;
+                border: 2px solid gray;
+                float: left;
+                /* margin-top: 15%; */
+                margin-left: 50px;
+            }
+
+            .block05 .pic502 {
+                width: 100%;
+                height: 480px;
+                background-image: url("./img/s041.jpg");
+                background-size: cover;
+                background-position: 0 4px;
+            }
+
+            .block05 .box503 {
+                width: 30%;
+                height: 480px;
+                border: 2px solid gray;
+                float: right;
+                /* margin-top: 15%; */
+            }
+
+            .block05 .pic503 {
+                width: 100%;
+                height: 480px;
+                background-image: url("./img/bride.jpg");
+                background-size: 110%;
+                background-position: center;
+            }
+
+            .block06 {
+                width: 100%;
+                height: 110vh;
+                background-attachment: fixed;
+                background-image: url("./img/two02.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .block06 .boxL {
+                width: 300px;
+                height: 400px;
+                background-image: url("./img/emmy.jpg");
+                background-size: cover;
+                background-position: -310px 0;
+                float: left;
+                margin-top: 15%;
+            }
+
+            .block06 .boxR {
+                width: 400px;
+                height: 400px;
+                background-color: rgb(37, 34, 34);
+                float: right;
+                margin-top: 15%;
+
+                /* text-align: center; */
+                padding: 30px;
+                color: bisque;
+                font-family: 微軟正黑體;
+                letter-spacing: 2px;
+                line-height: 27px;
+                font-size: 16px;
+            }
+
+            .block031 .t03 {
+                padding: 33vh 40vh;
+                color: rgba(226, 226, 226, 0.733);
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                letter-spacing: 1vh;
+                transition: 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+
+            footer {
+                font-size: 15px;
+                font-weight: 100;
+            }
+
+
+
+        }
+
         @media only screen and (max-width:1200px) {
             #block04 {
                 height: 200vh;
@@ -505,9 +615,7 @@
                 left: 0px;
                 top: 0%;
             }
-        }
 
-        @media only screen and (max-width:1200px) {
             .block06 {
                 width: 100%;
                 height: 200vh;
@@ -558,8 +666,8 @@
 
     <div class="block03" id="block03">
         <div class="container">
-            <p>–改編自亞瑟·柯南·道爾爵士的夏洛克·福爾摩斯偵探小說–</p>
-            <span class="introduction">
+            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">–改編自亞瑟·柯南·道爾爵士的夏洛克·福爾摩斯偵探小說–</p>
+            <span data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="introduction">
                 &nbsp;&nbsp;&nbsp;故事背景從19世紀大英帝國鼎盛時期搬到了21世紀英國繁華熱鬧的大都市，一位脾氣古怪的大偵探在現代倫敦的街頭四處搜尋線索。
                 福爾摩斯開始用手機傳簡訊；而華生不再寫日記與備忘錄，卻是在經營部落格......
                 用全新角度重新打造出的福爾摩斯，巧妙加入現代的元素，熟知科學辦案方法，讓這個廣為流傳的偵探故事被賦予新的色彩。
@@ -569,19 +677,21 @@
 
 
     <div class="block031">
-        <div class="t03">The Best Partner</div>
+        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="t03">The Best Partner</div>
     </div>
 
 
     <div class="block04" id="block04">
         <div class="chaL">
-            <p class="t041">夏洛克·福爾摩斯&nbsp;&nbsp;&nbsp;/Benedict Cumberbatch 飾<br><br>
+            <p data-aos="fade-right" data-aos-duration="500" class="t041">夏洛克·福爾摩斯&nbsp;&nbsp;&nbsp;/Benedict
+                Cumberbatch 飾<br><br>
                 “諮詢偵探”，平時在家等警方或顧客上門諮詢。<br>
                 擅長推理、小提琴和格鬥術，用演繹法來推斷案情，個人網站名為“演繹法研究”，經常在上面發表一些斷案的心得。<br>
                 每當面對複雜懸疑的案件時就異常興奮，視破案為實現人生價值的手段。</p>
         </div>
         <div class="chaR">
-            <p class="t042">約翰·華生&nbsp;&nbsp;&nbsp;/Martin Freeman 飾<br><br>
+            <p data-aos="fade-left" data-aos-offset="200" data-aos-duration="500" class="t042">約翰·華生&nbsp;&nbsp;&nbsp;/Martin
+                Freeman 飾<br><br>
                 退伍軍醫，曾服役於前諾桑伯蘭第五明火軍團，夏洛克的室友。<br>
                 性格穩重、溫和，對人友善，協助破案時則果敢堅強。槍法很準，曾經在夏洛克命懸一線時隔著兩道窗戶玻璃一槍打中兇手要害。</p>
         </div>
@@ -591,21 +701,21 @@
     <!-- <div class="block051"></div> -->
     <div class="block05" id="block05">
         <div class="container">
-            <div class="box501">
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="box501">
                 <div class="pic501"></div>
                 <p class="p501">第二季<br><br>
                     1.無人靈車（The Empty Hearse）<br>
                     2.三的徵兆（The Sign of Three）<br>
                     3.最後誓言（His Last Vow）</p>
             </div>
-            <div class="box502">
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="box502">
                 <div class="pic502"></div>
                 <p class="p501">第四季<br><br>
                     1.六座柴契爾夫人像（The Six Thatchers）<br>
                     2.撒謊的偵探（The Lying Detective）<br>
                     3.最後一案（The Final Problem）</p>
             </div>
-            <div class="box503">
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="box503">
                 <div class="pic503"></div>
                 <p class="p501">地獄新娘<br>幾小時前自殺身亡的妻子身著舊式婚紗再次出現了，她的幽靈帶著強烈的複仇慾望在
                     街上徘徊。夏洛克和華生不得不想盡辦法對付這個“從墳墓裡爬出來”的敵人...</p>
@@ -617,8 +727,8 @@
 
     <div class="block06" id="block06">
         <div class="container">
-            <div class="boxL"></div>
-            <div class="boxR">
+            <div data-aos="fade-up-right" class="boxL"></div>
+            <div data-aos="fade-up-left" class="boxR">
                 <h2>第66屆黃金時段艾美獎</h2>
                 <p>最佳男主角 班奈狄克·康柏拜區<br>
                     最佳男配角 馬丁·費里曼<br>
@@ -647,13 +757,14 @@
 
 
     <footer>
-        Copyright © 2009 Adobe Systems Incorporated. All rights reserved.
+        Copyright © 2010 BBC Sherlock Incorporated. All rights reserved.
     </footer>
 
 
     <div id="back_to_top">↑</div>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init();
         let to_top;
         to_top = document.querySelector('#back_to_top');
         //案件事件
@@ -662,14 +773,14 @@
             document.documentElement.scrollTop = 0;
         }
         //卷軸事件-當卷軸捲到xx px，回到最上的按鈕出現
-        window.onscroll = function(){
+        window.onscroll = function () {
             let scrollTop = document.documentElement.scrollTop;
             console.log(scrollTop);
 
             //如果超過200，就出現
-            if(scrollTop > 1070){
+            if (scrollTop > 1070) {
                 to_top.classList.add('show');
-            }else{
+            } else {
                 to_top.classList.remove('show');
             }
 
