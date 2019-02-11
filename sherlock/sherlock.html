@@ -275,6 +275,7 @@
         #block05 {
             width: 100%;
             height: 120vh;
+            position: relative;
             /* background-color: #fff; */
         }
 
@@ -282,6 +283,82 @@
             color: rgba(226, 226, 226, 0.808);
             text-align: center;
 
+        }
+
+        /*----------------SWIPER----------------*/
+        /*改变了颜色和加粗的样式*/
+        .swiper-button-next {
+            background-image: url(./img/swiper_button_002.png);
+        }
+
+        .swiper-button-prev {
+            background-image: url(./img/swiper_button_001.png);
+            left: 10px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            width: 27px;
+            height: 44px;
+            margin-top: -22px;
+            z-index: 10;
+            cursor: pointer;
+            background-size: 27px 44px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .swiper-pagination-bullet {
+            background: rgba(87, 40, 8, 0.884);
+        }
+
+        .swiper-pagination {
+    position: absolute;
+    text-align: center;
+        }
+
+        .swiper-container-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            bottom: 0px;
+        }
+
+        body {
+            background-image: url("./img/gray.jpg");
+            background-size: 100%;
+            background-attachment: fixed;
+            margin: 0;
+        }
+
+        .swiper-container {
+            padding-top: 50px;
+            width: 100%;
+            height: 90%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 16px;
+            font-family: 微軟正黑體;
+            color: rgba(226, 226, 226, 0.808);
+            padding-top: 85vh;
+
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
         }
 
 
@@ -376,64 +453,6 @@
 
         #back_to_top.show {
             display: block;
-        }
-
-
-        /*----------------SWIPER----------------*/
-        /*改变了颜色和加粗的样式*/
-        .swiper-button-next {
-            background-image: url(./img/swiper_button_002.png);
-        }
-
-        .swiper-button-prev {
-            background-image: url(./img/swiper_button_001.png);
-            left: 10px;
-        }
-
-        .swiper-pagination-bullet {
-            background: rgba(87, 40, 8, 0.884);
-        }
-
-        .swiper-container-horizontal>.swiper-pagination-bullets,
-        .swiper-pagination-custom,
-        .swiper-pagination-fraction {
-            bottom: 0px;
-        }
-
-        body {
-            background-image: url("./img/gray.jpg");
-            background-size: 100%;
-            background-attachment: fixed;
-            margin: 0;
-        }
-
-        .swiper-container {
-            padding-top: 50px;
-            width: 100%;
-            height: 90%;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 16px;
-            font-family: 微軟正黑體;
-            color: rgba(226, 226, 226, 0.808);
-            padding-top: 85vh;
-
-
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
         }
 
 
@@ -534,7 +553,7 @@
     <nav class="sub_nav"></nav>
 
 
-    <div class="block01">
+    <div class="block01" id="block01">
         <p>SHERLOCK</p>
         <a href="#block03" class="first">↓</a>
     </div>
@@ -621,21 +640,20 @@
                     <div class="swiper-slide" data-aos="flip-left" data-aos-easing="ease-out-cubic"
                         data-aos-duration="2000"
                         style="background-image: url(./img/s041.jpg); background-size:contain; background-repeat:no-repeat;">
-                        1.六座柴契爾夫人像（The Six Thatchers）<br>
-                        2.撒謊的偵探（The Lying Detective）<br>
-                        3.最後一案（The Final Problem）</div>
+                        1.六座柴契爾夫人像（The Six Thatchers )<br>
+                        2.撒謊的偵探（The Lying Detective）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                        3.最後一案（The Final
+                        Problem）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                     <div class="swiper-slide" data-aos="flip-left" data-aos-easing="ease-out-cubic"
                         data-aos-duration="2000"
                         style="background-image: url(./img/bride.jpg); background-size:contain; background-repeat:no-repeat;">
                         幾小時前自殺身亡的妻子再次出現，她的幽靈帶著強烈的複仇慾望在街上徘徊，從迷霧籠罩的萊姆豪斯到被廢棄
                         的教堂深處......</div>
-
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
             </div>
-
         </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
         <!-- Add Arrows -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
