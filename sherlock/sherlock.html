@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sherlock</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
     <style>
         * {
             box-sizing: border-box;
@@ -76,7 +79,7 @@
             margin-top: 80vh;
             margin-right: 10%;
             font-size: 50px;
-            font-weight: 600;
+            font-weight: 100;
             text-decoration: none;
         }
 
@@ -133,7 +136,7 @@
             letter-spacing: 1px;
             font-weight: 600;
             font-family: 微軟正黑體;
-            padding: 12px;
+            padding: 10px 12px 12px 12px;
             margin-right: 0px;
             float: left;
             transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -146,29 +149,6 @@
         }
 
 
-        /*----------------往上的按鈕----------------*/
-        .btnbacktotop-posd {
-            bottom: 160px;
-        }
-
-        .btnbacktotop {
-            display: block;
-            transition: all .4s;
-            z-index: 51;
-            cursor: pointer;
-            background-position: center;
-            /* background-image: url(../images/btn-backtotop.png); */
-            background-color: blanchedalmond;
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 40px;
-            height: 40px;
-            position: fixed;
-            bottom: -50px;
-            left: 60px;
-        }
-
-
         /*----------------第三頁小提琴----------------*/
         .block03 {
             width: 100%;
@@ -177,18 +157,14 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-
             /* background-attachment: fixed; */
-
-            background-attachment: fixed;
-
         }
 
         .block03 p {
             margin: 0;
             padding-top: 55vh;
-            font-size: 18px;
-            letter-spacing: 0.8vh;
+            font-size: 16px;
+            letter-spacing: 0.5vh;
             color: rgba(226, 226, 226, 0.808);
             font-family: 微軟正黑體;
             text-align: center;
@@ -293,8 +269,8 @@
         /*----------------第五頁三欄系列----------------*/
         .block051 {
             width: 100%;
-            height: 30vh;
-            background-image: url("./img/gray.jpg");
+            height: 20vh;
+            /* background-image: url("./img/gray.jpg"); */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -303,12 +279,27 @@
 
         .block05 {
             width: 100%;
-            height: 100vh;
-            background-image: url("./img/gray.jpg");
+            height: 50vh;
+            /* background-image: url("./img/gray.jpg"); */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
+        }
+
+        .bolck05 .title5 {
+            color: rgba(226, 226, 226, 0.808);
+            text-align: center;
+
+        }
+
+        .block05 .p501 {
+            color: rgba(226, 226, 226, 0.808);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 微軟正黑體;
+            text-align: center;
+            padding: 5px;
         }
 
         .block05 .box501 {
@@ -324,15 +315,6 @@
             height: 480px;
             background-image: url("./img/s02.jpg");
             background-size: contain;
-        }
-
-        .block05 .p501 {
-            color: rgba(226, 226, 226, 0.808);
-            font-size: 16px;
-            font-weight: 700;
-            font-family: 微軟正黑體;
-            text-align: center;
-            padding: 5px;
         }
 
         .block05 .box502 {
@@ -419,6 +401,13 @@
         }
 
 
+        /*----------------影片----------------*/
+        #frame {
+            width: 100%;
+            height: 100vh;
+        }
+
+
         /*----------------頁尾footer----------------*/
         footer {
             width: 100%;
@@ -434,27 +423,21 @@
         }
 
 
-        /*----------------影片----------------*/
-        #frame {
-            width: 100%;
-            height: 100vh;
-        }
-
-
         /*----------------往上按鈕----------------*/
         #back_to_top {
             position: fixed;
-            bottom: 60px;
-            right: 150px;
+            bottom: 65px;
+            right: 9.7%;
             color: rgb(226, 226, 226);
-            font-weight: 600;
-            font-size: 40px;
-            width: 40px;
-            height: 35px;
+            /* font-weight: 100; */
+            font-size: 32px;
+            width: 30px;
+            height: 30px;
             border-radius: 20px;
             background-color: rgba(87, 40, 8, 0.61);
             text-align: center;
             display: none;
+            z-index: 999;
         }
 
         #back_to_top.show {
@@ -462,19 +445,72 @@
         }
 
 
-        /*----------------RWD----------------*/
+        /*----------------SWIPER----------------*/
+        /*改变了颜色和加粗的样式*/
+        .swiper-button-next {
+            background-image: url(/img/swiper_button_002.png);
+        }
+
+        .swiper-button-prev {
+            background-image: url(/img/swiper_button_001.png);
+            left: 10px;
+        }
+
+        .swiper-pagination-bullet {
+            background: rgba(87, 40, 8, 0.884);
+        }
+
+        body {
+            background-image: url("./img/gray.jpg");
+            background-size: 100%;
+            background-attachment: fixed;
+            margin: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 90%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 16px;
+            font-family: 微軟正黑體;
+            color: rgba(226, 226, 226, 0.808);
+            padding-top: 85vh;
+
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+
+        /*----------------RWD-筆電版----------------*/
         @media only screen and (max-width:1500px) {
             .block03 .introduction {
                 font-size: 16px;
                 font-weight: 100;
             }
 
+            .block031 .t03 {
+                font-size: 20px;
+            }
+
             .block04 .chaL .t041 {
                 top: 48%;
-                left: 43%;
+                left: 42%;
                 width: 360px;
-                letter-spacing: 2px;
-                line-height: 27px;
                 font-size: 14px;
             }
 
@@ -482,116 +518,39 @@
                 top: 48%;
                 left: 7%;
                 width: 260px;
-                letter-spacing: 2px;
-                line-height: 27px;
                 font-size: 14px;
             }
 
             .block05 {
-                height: 150vh;
+                height: 130vh;
             }
 
             .block05 .box501 {
-                width: 30%;
-                height: 480px;
-                border: 2px solid gray;
-                float: left;
-                /* margin-top: 50%; */
-            }
-
-            .block05 .pic501 {
-                width: 100%;
-                height: 480px;
-                background-image: url("./img/s02.jpg");
-                background-size: contain;
-            }
-
-            .block05 .p501 {
-                color: rgba(226, 226, 226, 0.808);
-                font-size: 16px;
-                font-weight: 700;
-                font-family: 微軟正黑體;
-                text-align: center;
-                padding: 5px;
+                margin-top: 10%;
             }
 
             .block05 .box502 {
-                width: 30%;
-                height: 480px;
-                border: 2px solid gray;
-                float: left;
-                /* margin-top: 15%; */
-                margin-left: 50px;
-            }
-
-            .block05 .pic502 {
-                width: 100%;
-                height: 480px;
-                background-image: url("./img/s041.jpg");
-                background-size: cover;
-                background-position: 0 4px;
+                margin-top: 10%;
             }
 
             .block05 .box503 {
-                width: 30%;
-                height: 480px;
-                border: 2px solid gray;
-                float: right;
-                /* margin-top: 15%; */
-            }
-
-            .block05 .pic503 {
-                width: 100%;
-                height: 480px;
-                background-image: url("./img/bride.jpg");
-                background-size: 110%;
-                background-position: center;
+                margin-top: 10%;
             }
 
             .block06 {
-                width: 100%;
                 height: 110vh;
-                background-attachment: fixed;
-                background-image: url("./img/two02.jpg");
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
             }
 
             .block06 .boxL {
-                width: 300px;
-                height: 400px;
-                background-image: url("./img/emmy.jpg");
-                background-size: cover;
-                background-position: -310px 0;
-                float: left;
                 margin-top: 15%;
             }
 
             .block06 .boxR {
-                width: 400px;
-                height: 400px;
-                background-color: rgb(37, 34, 34);
-                float: right;
                 margin-top: 15%;
-
-                /* text-align: center; */
-                padding: 30px;
-                color: bisque;
-                font-family: 微軟正黑體;
-                letter-spacing: 2px;
-                line-height: 27px;
                 font-size: 16px;
             }
 
-            .block031 .t03 {
-                padding: 33vh 40vh;
-                color: rgba(226, 226, 226, 0.733);
-                font-size: 20px;
-                font-family: Arial, Helvetica, sans-serif;
-                letter-spacing: 1vh;
-                transition: 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            }
+
 
             footer {
                 font-size: 15px;
@@ -602,6 +561,7 @@
 
         }
 
+        /*----------------RWD-手機版----------------*/
         @media only screen and (max-width:1200px) {
             #block04 {
                 height: 200vh;
@@ -699,7 +659,8 @@
         </div>
         <div class="chaR">
 
-            <p data-aos="fade-left" data-aos-offset="200" data-aos-duration="500" class="t042">約翰·華生&nbsp;&nbsp;&nbsp;/Martin
+            <p data-aos="fade-left" data-aos-offset="200" data-aos-duration="500" class="t042">
+                約翰·華生&nbsp;&nbsp;&nbsp;/Martin
                 Freeman 飾<br><br>
                 退伍軍醫，曾服役於前諾桑伯蘭第五明火軍團，夏洛克的室友。<br>
                 性格穩重、溫和，對人友善，協助破案時則果敢堅強。槍法很準，曾經在夏洛克命懸一線時隔著兩道窗戶玻璃一槍打中兇手要害。</p>
@@ -707,34 +668,52 @@
     </div>
 
 
-    <!-- <div class="block051"></div> -->
+    <div class="block051"></div>
     <div class="block05" id="block05">
         <div class="container">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000"
+                        style="background-image: url(/img/s01.jpg); background-size:contain; background-repeat:no-repeat;">
+                        1.粉紅色研究（A Study in Pink）&nbsp;&nbsp;&nbsp;<br>
+                        2.銀行家之死（The Blind Banker）<br>
+                        3.致命遊戲（The Great Game）&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="swiper-slide" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000"
+                        style="background-image: url(/img/s02.jpg); background-size:contain; background-repeat:no-repeat;">
+                        1.情逢敵手（A Scandal in Belgravia ) &nbsp;&nbsp;&nbsp;<br>
+                        2.地獄犬（The Hounds of Baskerville）<br>
+                        3.最終的問題（The Reichenbach Fall )&nbsp;&nbsp;</div>
+                    <div class="swiper-slide" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000"
+                        style="background-image: url(/img/s03.jpg); background-size:contain; background-repeat:no-repeat;">
+                        1.無人靈車（The Empty Hearse )<br>
+                        2.三的徵兆（The Sign of Three）<br>
+                        3.最後誓言（His Last Vow） &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="swiper-slide" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000"
+                        style="background-image: url(/img/s041.jpg); background-size:contain; background-repeat:no-repeat;">
+                        1.六座柴契爾夫人像（The Six Thatchers）<br>
+                        2.撒謊的偵探（The Lying Detective）<br>
+                        3.最後一案（The Final Problem）</div>
+                    <div class="swiper-slide" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000"
+                        style="background-image: url(/img/bride.jpg); background-size:contain; background-repeat:no-repeat;">
+                        幾小時前自殺身亡的妻子再次出現，她的幽靈帶著強烈的複仇慾望在街上徘徊。<br> 從迷霧籠罩的萊姆豪斯到被廢棄
+                        的教堂深處，福爾摩斯想盡辦法對付這「從墳墓裡爬出來」的敵人...</div>
 
-            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="box501">
-                <div class="pic501"></div>
-                <p class="p501">第二季<br><br>
-                    1.無人靈車（The Empty Hearse）<br>
-                    2.三的徵兆（The Sign of Three）<br>
-                    3.最後誓言（His Last Vow）</p>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
 
-            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="box502">
-                <div class="pic502"></div>
-                <p class="p501">第四季<br><br>
-                    1.六座柴契爾夫人像（The Six Thatchers）<br>
-                    2.撒謊的偵探（The Lying Detective）<br>
-                    3.最後一案（The Final Problem）</p>
-            </div>
-
-            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="box503">
-                <div class="pic503"></div>
-                <p class="p501">地獄新娘<br>幾小時前自殺身亡的妻子身著舊式婚紗再次出現了，她的幽靈帶著強烈的複仇慾望在
-                    街上徘徊。夏洛克和華生不得不想盡辦法對付這個“從墳墓裡爬出來”的敵人...</p>
-            </div>
         </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
-    <!-- <div class="block051"></div> -->
 
 
     <div class="block06" id="block06">
@@ -801,6 +780,29 @@
 
     </script>
 
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 
 </body>
 
