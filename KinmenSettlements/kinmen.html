@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>拾金聚落 | 金門旅遊明信片kinmen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+
+  <!-- Demo styles -->
+  <style>
+    body {
+      background:url(/img/old_map.png);
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:rgb(187, 46, 46);
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav1 {
+      background-color:#754C24;
+      width:100%;
+      height:50px;
+    }
+
+    a {
+      color: white;
+      text-decoration:none;
+      letter-spacing: 3px;
+      padding: 20px;
+    }
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: contain;
+      width: 50%;
+      height: 70vh;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav1">
+    <li>
+      <a href="">拾金地圖</a>
+      <a href="">拾金商行</a>
+      <a href="">拾金初衷</a>
+      <a href="">關於拾金</a>
+    </li>
+  </nav>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(/img/building.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(/img/college.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(/img/elementaryschool.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(/img/archway.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/5)"></div>
+      <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/6)"></div>
+      <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/7)"></div>
+      <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/8)"></div>
+      <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/9)"></div>
+      <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/10)"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+</body>
+</html>
