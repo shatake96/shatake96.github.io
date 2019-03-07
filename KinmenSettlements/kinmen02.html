@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>拾金聚落 | 金門旅遊明信片kinmen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+        body {
+            background: url(./img/old_map.png);
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: rgb(187, 46, 46);
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav1 {
+            background-color: #754C24;
+            width: 130px;
+            height: 100%;
+            float: left;
+        }
+
+        .nav1 ul {
+            margin-top: 100px;
+            padding: 0;
+            margin-left: 30px;
+            list-style: none;
+        }
+
+        .nav1 li {
+            list-style-type: none;
+        }
+
+        a {
+            color: #F7ECCC;
+            text-decoration: none;
+            letter-spacing: 4px;
+            /* padding: 10px; */
+            line-height: 60px;
+        }
+
+        a:hover {
+            color: #eed5a2;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        .swiper-container {
+            width: 90%;
+            height: 300px;
+            padding-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .gallery-top {
+            height: 75%;
+            width: 60%;
+        }
+
+        .gallery-thumbs {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+
+        .gallery-thumbs .swiper-slide {
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        .gallery-thumbs .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav1">
+        <ul>
+            <li><a href="">拾金地圖</a></li>
+            <li><a href="">拾金商行</a></li>
+            <li><a href="">拾金初衷</a></li>
+            <li><a href="">關於拾金</a></li>
+        </ul>
+    </nav>
+    <!-- Swiper -->
+    <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./img/building.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/college.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/elementaryschool.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/archway.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/juguangTower.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/jiangongyu.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/deyueTower.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/WarHistoryMuseum.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/BroadcastingWall.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/WarArchway.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/WarArchway.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/WarArchway.jpg)"></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+    <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./img/building.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/college.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/elementaryschool.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/archway.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/juguangTower.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/jiangongyu.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/deyueTower.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/WarHistoryMuseum.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/BroadcastingWall.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/WarArchway.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/WarArchway.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/WarArchway.jpg)"></div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
+            slidesPerView: 6,
+            loop: true,
+            freeMode: true,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 5, //looped slides should be the same
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs,
+            },
+        });
+    </script>
+</body>
+
+</html>
