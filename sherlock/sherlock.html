@@ -142,7 +142,7 @@
             transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        /*----------------首頁NAV1----------------*/
+        /*----------------第一頁NAV1----------------*/
         .main_nav1 {
             width: 100%;
             height: 40px;
@@ -153,17 +153,17 @@
             left: 0;
             z-index: 10;
         }
-        .main_nav1 .nav_container{
-            position: relative;
-            width: 500px;
-            left: 38%;
+
+        .main_nav1:hover .start {
+            height: 94vh ;
+            background-color: rgba(9, 9, 19, 0.425) ;
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
         }
 
-        .main_nav1:hover .block01{
-            height: 94vh;
-
-            background-color: rgba(9, 9, 19, 0.425);
-            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .main_nav1 .nav_container {
+            position: relative;
+            width: 500px;
+            left: 37%;
         }
 
         .main_nav1 .but {
@@ -172,10 +172,10 @@
             text-decoration: none;
             text-align: center;
             font-size: 18px;
-            letter-spacing: 7px;
+            letter-spacing: 5px;
             font-weight: 600;
             font-family: 微軟正黑體;
-            padding: 10px 19px 10px 19px;
+            padding: 8px 19px 8px 24px;
             margin-right: 0px;
             float: left;
             transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -187,6 +187,7 @@
             background-color: rgba(88, 92, 112, 0.699);
             transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
+
 
         /*----------------第二頁Miss Me----------------*/
         .block02 {
@@ -240,7 +241,7 @@
             letter-spacing: 1px;
             font-weight: 600;
             font-family: 微軟正黑體;
-            padding: 10px 12px 12px 12px;
+            padding: 10px 12px 9px 12px;
             margin-right: 0px;
             float: left;
             transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -496,10 +497,10 @@
         }
 
 
-        /*----------------第七頁全家福----------------*/
+        /*----------------第七頁影片----------------*/
         .block07 {
             width: 100%;
-            height: 100vh;
+            height: 150vh;
             background-image: url("./img/family.jpg");
             background-size: cover;
             background-position: center;
@@ -507,11 +508,12 @@
             background-attachment: fixed;
         }
 
-
-        /*----------------影片----------------*/
         #frame {
-            width: 100%;
-            height: 100vh;
+            width: 400px;
+            height: 290px;
+            float: left;
+            margin-top: 100vh;
+            margin-left: 14vh;
         }
 
 
@@ -620,7 +622,7 @@
                 padding-top: 80vh;
             }
 
-            /*第六頁榮譽*/
+            /* 第六頁榮譽 */
             .block06 {
                 height: 110vh;
             }
@@ -632,6 +634,12 @@
             .block06 .boxR {
                 margin-top: 13%;
                 font-size: 16px;
+            }
+
+            /* 第七頁影片 */
+            #frame {
+                width: 300px;
+                height: 220px;
             }
         }
 
@@ -696,7 +704,7 @@
     </section>
 
 
-    <div class="block02"></div>
+    <section class="block02"></section>
 
     <nav class="main_nav2">
         <div class="container">
@@ -709,7 +717,7 @@
     </nav>
 
 
-    <div class="block03" id="block03">
+    <section class="block03" id="block03">
         <div class="container">
             <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">–改編自亞瑟·柯南·道爾爵士的夏洛克·福爾摩斯偵探小說–</p>
             <span class="introduction" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
@@ -718,15 +726,15 @@
                 用全新角度重新打造出的福爾摩斯，巧妙加入現代的元素，熟知科學辦案方法，讓這個廣為流傳的偵探故事被賦予新的色彩。
             </span>
         </div>
-    </div>
+    </section>
 
 
-    <div class="block031">
+    <section class="block031">
         <div class="t03" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">The Best Partner</div>
-    </div>
-    <section></section>
+    </section>
 
-    <div class="block04" id="block04">
+
+    <section class="block04" id="block04">
         <div class="chaL">
             <p class="t041" data-aos="fade-right" data-aos-duration="500">
                 夏洛克·福爾摩斯&nbsp;&nbsp;&nbsp;/Benedict Cumberbatch 飾<br><br>
@@ -741,11 +749,11 @@
                 退伍軍醫，曾服役於前諾桑伯蘭第五明火軍團，夏洛克的室友。<br>
                 性格穩重、溫和，對人友善，協助破案時則果敢堅強。槍法很準，曾經在夏洛克命懸一線時隔著兩道窗戶玻璃一槍打中兇手要害。</p>
         </div>
-    </div>
+    </section>
 
 
-    <div class="block051"></div>
-    <div class="block05" id="block05">
+    <section class="block051"></section>
+    <section class="block05" id="block05">
         <div class="container">
             <!-- Swiper -->
             <div class="swiper-container">
@@ -803,10 +811,10 @@
         <!-- Add Arrows -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-    </div>
+    </section>
 
 
-    <div class="block06" id="block06">
+    <section class="block06" id="block06">
         <div class="container">
             <div class="boxL" data-aos="fade-up-right"></div>
             <div class="boxR" data-aos="fade-up-left">
@@ -821,26 +829,24 @@
                     Harding（最後的誓言）</p>
             </div>
         </div>
-
-    </div>
-
-
-    <div class="block07"></div>
+    </section>
 
 
-    <!-- <div class="clearfix"></div> -->
-
-    <div id="frame">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qlcWFoNqZHc" frameborder="0" muted=”true”
-            preload=”auto” allow=" accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-    </div>
+    <section class="block07">
+        <div id="frame">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qlcWFoNqZHc" frameborder="0"
+                muted=”true” preload=”auto”
+                allow=" accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </section>
 
 
     <footer>
         Copyright © 2010 BBC Sherlock Incorporated. All rights reserved.
     </footer>
 
+    <!-- <div class="clearfix"></div> -->
 
     <div id="back_to_top">↑</div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
