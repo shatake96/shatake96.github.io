@@ -137,9 +137,13 @@
 
         .block01 .start:hover {
             height: 94vh;
-
             background-color: rgba(9, 9, 19, 0.425);
             transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .block01 .start:active .box01 .but{
+            background-color: rgba(88, 92, 112, 0.699);
+
         }
 
         /*----------------第一頁NAV1----------------*/
@@ -154,19 +158,19 @@
             z-index: 10;
         }
 
-        .main_nav1:hover .start {
+        .box01:hover .start {
             height: 94vh ;
             background-color: rgba(9, 9, 19, 0.425) ;
             transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
         }
 
-        .main_nav1 .nav_container {
+        .box01 .nav_container {
             position: relative;
             width: 500px;
             left: 37%;
         }
 
-        .main_nav1 .but {
+        .box01 .but {
             display: block;
             color: rgb(255, 212, 163);
             text-decoration: none;
@@ -182,7 +186,7 @@
             cursor: pointer;
         }
 
-        .main_nav1 .but:hover {
+        .box01 .but:hover {
             color: rgb(255, 195, 126);
             background-color: rgba(88, 92, 112, 0.699);
             transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -692,14 +696,15 @@
 
     <section class="block01" id="block01">
         <p>SHERLOCK</p>
-        <a href="#block03" class="start">點我進入</a>
-        <nav class="main_nav1">
+        <nav class="box01">
+        <a href="#block03" class="start"></a>
+            <div class="main_nav1">
             <div class="nav_container">
                 <a class="but" href="#block03">背景</a>
                 <a class="but" href="#block04">人物</a>
                 <a class="but" href="#block05">系列</a>
                 <a class="but" href="#block06">榮譽</a>
-            </div>
+            </div></div>
         </nav>
     </section>
 
