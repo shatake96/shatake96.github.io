@@ -81,7 +81,7 @@
 
         /*----------------裝飾NAV----------------*/
         .sub_nav {
-            border-top: 20px solid rgba(87, 40, 8, 0.884);
+            border-top: 18px solid rgba(87, 40, 8, 0.884);
             position: absolute;
             top: 0;
             left: 0;
@@ -103,71 +103,48 @@
 
         .block01 p {
             position: absolute;
-            top: 15%;
+            top: 20%;
             left: 50%;
-            transform: translateX(-49%);
+            transform: translateX(-47%);
             margin: 0;
-            width: 520px;
-            height: 70px;
-            border-radius: 10px;
-            /* background-color: rgba(87, 40, 8, 0.699); */
-
             font-size: 70px;
             font-weight: 600;
-            letter-spacing: 1px;
+            letter-spacing: 6px;
             color: rgba(199, 199, 199, 0.884);
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
-            padding: 1%;
         }
-
 
         /*----------------第一頁↓壓黑----------------*/
         .block01 .start {
             background-color: rgba(0, 0, 0, 0);
             color: rgba(226, 226, 226, 0.808);
-            float: right;
-            font-size: 10px;
-            font-weight: 100;
+            float: left;
             width: 100%;
             height: 100vh;
             text-decoration: none;
             cursor: pointer;
-        }
-
-        .block01 .start:hover {
-            height: 94vh;
-            background-color: rgba(9, 9, 19, 0.425);
             transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .block01 .start:active .box01 .but{
-            background-color: rgba(88, 92, 112, 0.699);
-
-        }
-
         /*----------------第一頁NAV1----------------*/
-        .main_nav1 {
+        .box01 .main_nav1 {
             width: 100%;
-            height: 40px;
+            height: 50px;
             background-color: rgba(87, 40, 8, 0.884);
             float: left;
-            position: sticky;
-            top: 0;
-            left: 0;
-            z-index: 10;
         }
 
         .box01:hover .start {
-            height: 94vh ;
-            background-color: rgba(9, 9, 19, 0.425) ;
-            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+            height: 96vh;
+            background-color: rgba(9, 9, 19, 0.425);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
         }
 
         .box01 .nav_container {
             position: relative;
             width: 500px;
-            left: 37%;
+            left: 40%;
         }
 
         .box01 .but {
@@ -175,11 +152,11 @@
             color: rgb(255, 212, 163);
             text-decoration: none;
             text-align: center;
-            font-size: 18px;
-            letter-spacing: 5px;
+            font-size: 20px;
+            letter-spacing: 7px;
             font-weight: 600;
             font-family: 微軟正黑體;
-            padding: 8px 19px 8px 24px;
+            padding: 8px 18px 13px 28px;
             margin-right: 0px;
             float: left;
             transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -190,6 +167,11 @@
             color: rgb(255, 195, 126);
             background-color: rgba(88, 92, 112, 0.699);
             transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .box01:active #but1 {
+            color: rgb(255, 195, 126);
+            background-color: rgba(88, 92, 112, 0.699);
         }
 
 
@@ -272,9 +254,10 @@
 
         .block03 p {
             margin: 0;
-            padding-top: 55vh;
-            font-size: 16px;
-            letter-spacing: 0.5vh;
+            padding-top: 50vh;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 3px;
             color: rgba(226, 226, 226, 0.808);
             font-family: 微軟正黑體;
             text-align: center;
@@ -285,11 +268,10 @@
             color: rgb(255, 235, 205);
             padding: 2% 10%;
             font-family: 微軟正黑體;
-            letter-spacing: 0.5vh;
+            letter-spacing: 2px;
             line-height: 30px;
-            font-size: 16px;
+            font-size: 18px;
             text-align: center;
-            transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
         }
 
         /*文字分三欄*/
@@ -359,7 +341,7 @@
             font-family: 微軟正黑體;
             letter-spacing: 2px;
             line-height: 27px;
-            font-size: 16px;
+            font-size: 17px;
         }
 
         .block04 .chaR .t042 {
@@ -368,11 +350,11 @@
             top: 48%;
             left: 10%;
             color: rgb(212, 212, 212);
-            width: 300px;
+            width: 320px;
             font-family: 微軟正黑體;
             letter-spacing: 2px;
             line-height: 27px;
-            font-size: 16px;
+            font-size: 17px;
         }
 
 
@@ -560,11 +542,41 @@
 
         /*----------------RWD-筆電版----------------*/
         @media only screen and (max-width:1500px) {
+            .block01 p {
+                position: absolute;
+                top: 17%;
+                left: 50%;
+                transform: translateX(-49%);
+                margin: 0;
+                font-size: 70px;
+                font-weight: 600;
+                letter-spacing: 3px;
+            }
+
+            .box01 .main_nav1 {
+                height: 40px;
+            }
+
+            .box01:hover .start {
+                height: 94vh;
+            }
+
+            .box01 .nav_container {
+                width: 500px;
+                left: 37%;
+            }
+
+            .box01 .but {
+                font-size: 18px;
+                letter-spacing: 5px;
+                padding: 8px 18px 8px 24px;
+                margin-right: 0px;
+            }
 
             /*第三頁小提琴*/
             .block03 .introduction {
-                font-size: 16px;
                 font-weight: 100;
+                font-size: 18px;
             }
 
             .block031 .t03 {
@@ -575,15 +587,15 @@
             .block04 .chaL .t041 {
                 top: 48%;
                 left: 42%;
-                width: 360px;
-                font-size: 14px;
+                width: 340px;
+                font-size: 17px;
             }
 
             .block04 .chaR .t042 {
                 top: 48%;
                 left: 7%;
                 width: 260px;
-                font-size: 14px;
+                font-size: 17px;
             }
 
             /*第五頁系列Swiper*/
@@ -697,14 +709,15 @@
     <section class="block01" id="block01">
         <p>SHERLOCK</p>
         <nav class="box01">
-        <a href="#block03" class="start"></a>
+            <a href="#block03" class="start"></a>
             <div class="main_nav1">
-            <div class="nav_container">
-                <a class="but" href="#block03">背景</a>
-                <a class="but" href="#block04">人物</a>
-                <a class="but" href="#block05">系列</a>
-                <a class="but" href="#block06">榮譽</a>
-            </div></div>
+                <div class="nav_container">
+                    <a class="but" id="but1" href="#block03">背景</a>
+                    <a class="but" href="#block04">人物</a>
+                    <a class="but" href="#block05">系列</a>
+                    <a class="but" href="#block06">榮譽</a>
+                </div>
+            </div>
         </nav>
     </section>
 
@@ -724,11 +737,11 @@
 
     <section class="block03" id="block03">
         <div class="container">
-            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">–改編自亞瑟·柯南·道爾爵士的夏洛克·福爾摩斯偵探小說–</p>
+            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">新世紀福爾摩斯
+                (SHERLOCK)<br>英國BBC電視連續劇，改編自亞瑟·柯南·道爾爵士的夏洛克·福爾摩斯偵探小說</p>
             <span class="introduction" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                &nbsp;&nbsp;&nbsp;故事背景從19世紀大英帝國鼎盛時期搬到了21世紀英國繁華熱鬧的大都市，一位脾氣古怪的大偵探在現代倫敦的街頭四處搜尋線索。
-                福爾摩斯開始用手機傳簡訊；而華生不再寫日記與備忘錄，卻是在經營部落格......
-                用全新角度重新打造出的福爾摩斯，巧妙加入現代的元素，熟知科學辦案方法，讓這個廣為流傳的偵探故事被賦予新的色彩。
+                故事背景從19世紀大英帝國搬到了21世紀英國繁華熱鬧的大都市，<br>
+                用全新角度重新打造出的福爾摩斯，巧妙加入現代的元素，<br>熟知科學辦案方法，將這個廣為流傳的偵探故事賦予新的色彩。
             </span>
         </div>
     </section>
@@ -742,17 +755,14 @@
     <section class="block04" id="block04">
         <div class="chaL">
             <p class="t041" data-aos="fade-right" data-aos-duration="500">
-                夏洛克·福爾摩斯&nbsp;&nbsp;&nbsp;/Benedict Cumberbatch 飾<br><br>
-                “諮詢偵探”，平時在家等警方或顧客上門諮詢。<br>
-                擅長推理、小提琴和格鬥術，用演繹法來推斷案情，個人網站名為“演繹法研究”，經常在上面發表一些斷案的心得。<br>
-                每當面對複雜懸疑的案件時就異常興奮，視破案為實現人生價值的手段。</p>
+                夏洛克·福爾摩斯 /<br>Benedict Cumberbatch 飾<br><br>
+                此劇主角，擅長推理、小提琴和格鬥術，用演繹法來推斷案情，每當面對複雜懸疑的案件時就異常興奮，視破案為實現人生價值的手段。</p>
         </div>
         <div class="chaR">
 
             <p class="t042" data-aos="fade-left" data-aos-offset="200" data-aos-duration="500">
-                約翰·華生&nbsp;&nbsp;&nbsp;/Martin Freeman 飾<br><br>
-                退伍軍醫，曾服役於前諾桑伯蘭第五明火軍團，夏洛克的室友。<br>
-                性格穩重、溫和，對人友善，協助破案時則果敢堅強。槍法很準，曾經在夏洛克命懸一線時隔著兩道窗戶玻璃一槍打中兇手要害。</p>
+                約翰·華生 /<br>Martin Freeman 飾<br><br>
+                退伍軍醫，性格溫和，協助破案時則果敢堅強。槍法很準，曾在夏洛克命懸一線時隔兩道窗一槍打中兇手。</p>
         </div>
     </section>
 
