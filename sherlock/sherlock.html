@@ -18,7 +18,7 @@
 
         body {
             background-image: url("./img/gray.jpg");
-            background-size: 100%;
+            background-size: cover;
             background-attachment: fixed;
             margin: 0;
         }
@@ -660,7 +660,53 @@
         }
 
         /*----------------RWD-手機版----------------*/
-        @media only screen and (max-width:1200px) {
+        @media only screen and (max-width:500px) {
+            .block01 {
+                background-position: -590px;
+            }
+
+            .block01 p {
+                top: 22%;
+                font-size: 50px;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+
+            .block01 .box01 {
+                display: none;
+            }
+
+            .block02 {
+                display: none;
+            }
+
+            .main_nav2 .but {
+                display: none;
+            }
+
+            .block03 {
+                background-position: -120px;
+            }
+
+            .block03 p {
+                padding-top: 50vh;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 3px;
+            }
+
+            .block03 .introduction {
+                padding: 10% 17%;
+                letter-spacing: 2px;
+                line-height: 20px;
+                font-size: 14px;
+            }
+
+            .block031 .t03 {
+                padding: 33vh 20vh;
+                font-size: 20px;
+            }
+
             #block04 {
                 height: 200vh;
             }
@@ -678,22 +724,74 @@
                 top: 0%;
             }
 
+            .block04 .chaL .t041 {
+                top: 48%;
+                left: 10%;
+                width: 320px;
+                letter-spacing: 2px;
+                line-height: 27px;
+                font-size: 17px;
+            }
+
+            #block05 {
+                height: 50vh;
+            }
+
+            .swiper-container {
+                padding-top: 5%;
+            }
+
+            .swiper-title {
+                position: relative;
+                text-align: center;
+                margin: auto;
+                letter-spacing: 1px;
+                font-size: 18px;
+                padding-top: 25vh;
+            }
+
+            .block05 .swiper-p {
+                display: none;
+            }
+
             .block06 {
                 width: 100%;
                 height: 200vh;
             }
 
             .block06 .boxL {
-                width: 50%;
-                height: 70vh;
+                width: 100%;
+                height: 400px;
                 background-size: cover;
-                background-position: 400px 0;
-                margin-left: 200px;
+                background-position: -330px 0;
+                margin-top: 40%;
             }
 
             .block06 .boxR {
                 width: 100%;
-                height: 40vh;
+                height: 400px;
+                padding: 33px;
+                font-size: 15px;
+            }
+
+            .block07 {
+                height: 30vh;
+                background-size: 0px;
+                background-attachment: scroll;
+            }
+
+            #frame {
+                width: 100%;
+                height: 200px;
+                float: left;
+                margin-top: 0vh;
+                margin-left: 0px;
+            }
+
+            footer {
+                height: 35px;
+                font-size: 12px;
+                line-height: 15px;
             }
 
         }
