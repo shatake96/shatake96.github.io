@@ -169,7 +169,7 @@
             transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .box01:active #but1 {
+        .block01 .start:active #but1 {
             color: rgb(255, 195, 126);
             background-color: rgba(88, 92, 112, 0.699);
         }
@@ -531,7 +531,7 @@
             background-color: rgba(87, 40, 8, 0.61);
             text-align: center;
             display: none;
-            z-index: 999;
+            z-index: 9999;
             cursor: pointer;
         }
 
@@ -659,6 +659,109 @@
             }
         }
 
+        /*----------------RWD-平板版----------------*/
+        @media only screen and (max-width:1100px) {
+            .container {
+                max-width: 900px;
+                margin: auto;
+            }
+
+            .block01 {}
+
+            .block02 {}
+
+            .block01 p {
+                left: 52%;
+            }
+
+            .block01 .start {
+                height: 97vh;
+            }
+
+            .box01:hover .start {
+                height: 97vh;
+            }
+
+            .box01 .nav_container {
+                width: 400px;
+                left: 33%;
+            }
+
+            .block031 .t03 {
+                padding: 30vh 33vh;
+                font-size: 20px;
+            }
+
+            .block04 .chaL {
+                background-position: 200%;
+            }
+
+            .block04 .chaR {
+                background-position: -90%;
+            }
+
+            .block04 .chaL .t041 {
+                top: 58%;
+                left: 10vh;
+                width: 280px;
+            }
+
+            .block04 .chaR .t042 {
+                top: 58%;
+                left: 7%;
+                width: 260px;
+            }
+
+            .block051 {
+                display: none;
+            }
+
+            /*------------SWIPER-----------*/
+            /*左右箭頭*/
+            .swiper-button-next {
+                right: 2%;
+            }
+
+            .swiper-button-prev {
+                left: 2%;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                top: 41%;
+            }
+
+            .swiper-container {
+                padding-top: 35vh;
+                height: 90%;
+            }
+
+            .swiper-title {
+                letter-spacing: 1px;
+                padding-top: 400px;
+            }
+
+            .block06 .boxL {
+                margin-top: 70%;
+            }
+
+            .block06 .boxR {
+                margin-top: 70%;
+            }
+
+            .block07 {
+                background-size: 190%;
+                background-position: 60%;
+            }
+
+            #frame {
+                width: 300px;
+                height: 220px;
+                margin-top: 110vh;
+                margin-left: 12vh;
+            }
+        }
+
         /*----------------RWD-手機版----------------*/
         @media only screen and (max-width:500px) {
             .block01 {
@@ -735,6 +838,10 @@
 
             #block05 {
                 height: 50vh;
+            }
+
+            .block051 {
+                height: 10vh;
             }
 
             .swiper-container {
